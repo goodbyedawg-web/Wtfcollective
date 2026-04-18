@@ -15,6 +15,8 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
 - [x] Memory bank documentation
 - [x] Recipe system for common features
 - [x] Configured Next.js for static export deployment
+- [x] Generated static build in docs/ directory for GitHub Pages
+- [x] Added .nojekyll file to prevent Jekyll processing issues
 
 ## Current Structure
 
@@ -86,3 +88,4 @@ export async function GET() {
 | Date | Changes |
 |------|---------|
 | Initial | Template created with base setup |
+| 2026-04-18 | Configured Next.js for static export to docs/ for GitHub Pages deployment |
