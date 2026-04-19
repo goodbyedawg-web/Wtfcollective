@@ -1,5 +1,7 @@
+'use client';
+
 import Link from 'next/link';
-import ThemeSwitcher from '../components/ThemeSwitcher';
+import MobileNavigation from '../components/MobileNavigation';
 import ParticleBackground from '../components/ParticleBackground';
 import TypewriterText from '../components/TypewriterText';
 
@@ -14,14 +16,7 @@ export default function Home() {
             <div className="text-6xl text-red-500 dark:text-red-500 light:text-blue-600 animate-float hover-glow">💀</div>
             <div className="text-2xl font-bold gradient-text">WTF COLLECTIVE</div>
           </div>
-          <div className="flex items-center space-4">
-            <ThemeSwitcher />
-            <nav className="ml-6 space-x-6 text-sm uppercase tracking-wide">
-              <Link href="/blog" className="hover:text-red-400 dark:hover:text-red-400 light:hover:text-blue-600 transition">Blog</Link>
-              <Link href="/about" className="hover:text-red-400 dark:hover:text-red-400 light:hover:text-blue-600 transition">About</Link>
-              <Link href="/contact" className="hover:text-red-400 dark:hover:text-red-400 light:hover:text-blue-600 transition">Contact</Link>
-            </nav>
-          </div>
+          <MobileNavigation />
         </div>
       </header>
 
@@ -55,8 +50,9 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* Small Block */}
           <div className="bg-purple-900 dark:bg-purple-900 light:bg-purple-200 border border-purple-500 dark:border-purple-500 light:border-purple-400 p-4 rounded-lg hover-lift animate-slide-in-left">
-            <h3 className="text-purple-300 dark:text-purple-300 light:text-purple-800 font-bold mb-2 animate-pulse">Premium Content</h3>
-            <p className="text-sm text-gray-300 dark:text-gray-300 light:text-gray-700">Unlock exclusive insights into human darkness.</p>
+            <h3 className="text-purple-300 dark:text-purple-300 light:text-purple-800 font-bold mb-2 animate-pulse">Kentucky Crimes</h3>
+            <p className="text-sm text-gray-300 dark:text-gray-300 light:text-gray-700">Dark cases from Louisville and across the Bluegrass State.</p>
+            <Link href="/louisville-ky" className="text-purple-400 dark:text-purple-400 light:text-purple-600 text-xs uppercase tracking-wide hover:underline">Explore →</Link>
           </div>
 
           {/* Medium Block */}
