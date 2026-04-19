@@ -57,7 +57,7 @@ export default async function Blog() {
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center space-x-4">
             <div className="text-6xl text-red-500 dark:text-red-500 light:text-blue-600">💀</div>
-            <div className="text-2xl font-bold text-yellow-400 dark:text-yellow-400 light:text-blue-800">CODE MASTERY</div>
+            <div className="text-2xl font-bold text-yellow-400 dark:text-yellow-400 light:text-blue-800">WTF COLLECTIVE</div>
           </div>
           <div className="flex items-center space-4">
             <ThemeSwitcher />
@@ -106,7 +106,7 @@ export default async function Blog() {
         {/* Footer */}
         <div className="mt-12 text-center border-t border-gray-600 dark:border-gray-600 light:border-gray-300 pt-8">
           <blockquote className="text-lg italic text-gray-400 dark:text-gray-400 light:text-gray-600">
-            &ldquo;Code is the universal language. Mastery comes from speaking it fluently.&rdquo; - Code Mastery Collective
+            &ldquo;Code is the universal language. Mastery comes from speaking it fluently.&rdquo; - WTF Collective
           </blockquote>
         </div>
       </main>
