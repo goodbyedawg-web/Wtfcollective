@@ -15,7 +15,10 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
 - [x] Memory bank documentation
 - [x] Recipe system for common features
 - [x] Removed static export config for Vercel serverless deployment
-- [x] Added basic blog functionality with markdown posts
+- [x] Redesigned WTF Collective blog with dark newspaper theme
+- [x] Added comprehensive content on dark psychology, featuring Jeffrey Glenn Hutchinson
+- [x] Implemented flashy, colorful block layout with varying sizes
+- [x] Added witty commentary and dark irony quotes from historical figures
 
 ## Current Structure
 
@@ -88,3 +91,4 @@ export async function GET() {
 |------|---------|
 | Initial | Template created with base setup |
 | 2026-04-19 | Removed static export config for Vercel serverless deployment |
+| 2026-04-20 | Complete redesign of WTF Collective with dark theme and comprehensive content |
