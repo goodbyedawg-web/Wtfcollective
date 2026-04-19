@@ -2,14 +2,14 @@ import Link from 'next/link';
 
 export default function LouisvilleKY() {
   return (
-    <div className="min-h-screen bg-black text-white font-mono dark:bg-black dark:text-white light:bg-white light:text-black">
+    <div className="min-h-screen bg-theme-primary text-theme-primary font-mono">
       {/* Header */}
-      <header className="border-b-4 border-red-600 dark:border-red-600 light:border-blue-600 p-4">
+      <header className="border-b-4 border-theme-primary p-4">
         <div className="flex items-center justify-between max-w-7xl mx-auto">
           <div className="flex items-center space-x-4">
             <Link href="/" className="flex items-center space-x-4 hover:opacity-80 transition">
-              <div className="text-6xl text-red-500 dark:text-red-500 light:text-blue-600">💀</div>
-              <div className="text-2xl font-bold gradient-text">WTF COLLECTIVE</div>
+            <div className="text-6xl text-theme-accent">💀</div>
+            <div className="text-2xl font-bold gradient-text">WTF COLLECTIVE</div>
             </Link>
           </div>
           <nav className="hidden md:flex space-x-6 text-sm uppercase tracking-wide">

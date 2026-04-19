@@ -1,32 +1,91 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
-const getInitialTheme = () => {
-  if (typeof window !== 'undefined') {
-    const savedTheme = localStorage.getItem('theme');
-    return savedTheme ? savedTheme === 'dark' : true;
+type Theme = 'dark' | 'light' | 'neon' | 'cyber' | 'fire';
+
+const themes: Theme[] = ['dark', 'light', 'neon', 'cyber', 'fire'];
+
+const themeConfig = {
+  dark: {
+    primary: 'red',
+    secondary: 'yellow',
+    background: 'black',
+    accent: 'red',
+    emoji: '🌙',
+    title: 'Dark Mode'
+  },
+  light: {
+    primary: 'blue',
+    secondary: 'blue',
+    background: 'white',
+    accent: 'blue',
+    emoji: '☀️',
+    title: 'Light Mode'
+  },
+  neon: {
+    primary: 'purple',
+    secondary: 'pink',
+    background: 'black',
+    accent: 'purple',
+    emoji: '💜',
+    title: 'Neon Dreams'
+  },
+  cyber: {
+    primary: 'green',
+    secondary: 'cyan',
+    background: 'black',
+    accent: 'green',
+    emoji: '🤖',
+    title: 'Cyber Punk'
+  },
+  fire: {
+    primary: 'orange',
+    secondary: 'red',
+    background: 'black',
+    accent: 'orange',
+    emoji: '🔥',
+    title: 'Fire Storm'
   }
-  return true;
+};
+
+const getInitialTheme = (): Theme => {
+  if (typeof window !== 'undefined') {
+    const savedTheme = localStorage.getItem('theme') as Theme;
+    return savedTheme && themes.includes(savedTheme) ? savedTheme : 'dark';
+  }
+  return 'dark';
 };
 
 export default function ThemeSwitcher() {
-  const [isDark, setIsDark] = useState(getInitialTheme);
+  const [currentTheme, setCurrentTheme] = useState<Theme>(getInitialTheme);
 
-  const toggleTheme = () => {
-    const newTheme = !isDark;
-    setIsDark(newTheme);
-    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
-    document.documentElement.classList.toggle('dark', newTheme);
+  useEffect(() => {
+    // Remove all theme classes
+    themes.forEach(theme => {
+      document.documentElement.classList.remove(theme);
+    });
+    // Add current theme class
+    document.documentElement.classList.add(currentTheme);
+  }, [currentTheme]);
+
+  const cycleTheme = () => {
+    const currentIndex = themes.indexOf(currentTheme);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    const nextTheme = themes[nextIndex];
+    setCurrentTheme(nextTheme);
+    localStorage.setItem('theme', nextTheme);
   };
+
+  const theme = themeConfig[currentTheme];
 
   return (
     <button
-      onClick={toggleTheme}
-      className="text-yellow-400 hover:text-yellow-300 dark:text-yellow-400 dark:hover:text-yellow-300 light:text-blue-600 light:hover:text-blue-500 transition p-2 rounded border border-yellow-400 hover:border-yellow-300 dark:border-yellow-400 dark:hover:border-yellow-300 light:border-blue-400 light:hover:border-blue-300"
-      title={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+      onClick={cycleTheme}
+      className={`text-${theme.secondary}-400 hover:text-${theme.secondary}-300 transition p-2 rounded border border-${theme.secondary}-400 hover:border-${theme.secondary}-300`}
+      title={`Switch to ${themeConfig[themes[(themes.indexOf(currentTheme) + 1) % themes.length]].title}`}
     >
-      {isDark ? '☀️' : '🌙'}
+      {theme.emoji}
     </button>
   );
 }

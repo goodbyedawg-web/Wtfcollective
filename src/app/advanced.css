@@ -1,3 +1,110 @@
+/* Theme Definitions */
+.dark {
+  --bg-primary: #000000;
+  --bg-secondary: #1f2937;
+  --bg-tertiary: #111827;
+  --text-primary: #ffffff;
+  --text-secondary: #d1d5db;
+  --accent-primary: #ef4444;
+  --accent-secondary: #f59e0b;
+  --border-primary: #ef4444;
+  --border-secondary: #374151;
+}
+
+.light {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-tertiary: #f3f4f6;
+  --text-primary: #000000;
+  --text-secondary: #374151;
+  --accent-primary: #2563eb;
+  --accent-secondary: #3b82f6;
+  --border-primary: #2563eb;
+  --border-secondary: #d1d5db;
+}
+
+.neon {
+  --bg-primary: #000000;
+  --bg-secondary: #0f0f23;
+  --bg-tertiary: #1a1a2e;
+  --text-primary: #ffffff;
+  --text-secondary: #b794f6;
+  --accent-primary: #8b5cf6;
+  --accent-secondary: #ec4899;
+  --border-primary: #8b5cf6;
+  --border-secondary: #4c1d95;
+}
+
+.cyber {
+  --bg-primary: #000000;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #1e293b;
+  --text-primary: #ffffff;
+  --text-secondary: #10b981;
+  --accent-primary: #10b981;
+  --accent-secondary: #06b6d4;
+  --border-primary: #10b981;
+  --border-secondary: #065f46;
+}
+
+.fire {
+  --bg-primary: #000000;
+  --bg-secondary: #1c1917;
+  --bg-tertiary: #292524;
+  --text-primary: #ffffff;
+  --text-secondary: #fb923c;
+  --accent-primary: #f97316;
+  --accent-secondary: #ef4444;
+  --border-primary: #f97316;
+  --border-secondary: #9a3412;
+}
+
+/* Dynamic theme application */
+.dark .bg-theme-primary { background-color: var(--bg-primary); }
+.dark .bg-theme-secondary { background-color: var(--bg-secondary); }
+.dark .bg-theme-tertiary { background-color: var(--bg-tertiary); }
+.dark .text-theme-primary { color: var(--text-primary); }
+.dark .text-theme-secondary { color: var(--text-secondary); }
+.dark .text-theme-accent { color: var(--accent-primary); }
+.dark .border-theme-primary { border-color: var(--border-primary); }
+.dark .border-theme-secondary { border-color: var(--border-secondary); }
+
+.light .bg-theme-primary { background-color: var(--bg-primary); }
+.light .bg-theme-secondary { background-color: var(--bg-secondary); }
+.light .bg-theme-tertiary { background-color: var(--bg-tertiary); }
+.light .text-theme-primary { color: var(--text-primary); }
+.light .text-theme-secondary { color: var(--text-secondary); }
+.light .text-theme-accent { color: var(--accent-primary); }
+.light .border-theme-primary { border-color: var(--border-primary); }
+.light .border-theme-secondary { border-color: var(--border-secondary); }
+
+.neon .bg-theme-primary { background-color: var(--bg-primary); }
+.neon .bg-theme-secondary { background-color: var(--bg-secondary); }
+.neon .bg-theme-tertiary { background-color: var(--bg-tertiary); }
+.neon .text-theme-primary { color: var(--text-primary); }
+.neon .text-theme-secondary { color: var(--text-secondary); }
+.neon .text-theme-accent { color: var(--accent-primary); }
+.neon .border-theme-primary { border-color: var(--border-primary); }
+.neon .border-theme-secondary { border-color: var(--border-secondary); }
+
+.cyber .bg-theme-primary { background-color: var(--bg-primary); }
+.cyber .bg-theme-secondary { background-color: var(--bg-secondary); }
+.cyber .bg-theme-tertiary { background-color: var(--bg-tertiary); }
+.cyber .text-theme-primary { color: var(--text-primary); }
+.cyber .text-theme-secondary { color: var(--text-secondary); }
+.cyber .text-theme-accent { color: var(--accent-primary); }
+.cyber .border-theme-primary { border-color: var(--border-primary); }
+.cyber .border-theme-secondary { border-color: var(--border-secondary); }
+
+.fire .bg-theme-primary { background-color: var(--bg-primary); }
+.fire .bg-theme-secondary { background-color: var(--bg-secondary); }
+.fire .bg-theme-tertiary { background-color: var(--bg-tertiary); }
+.fire .text-theme-primary { color: var(--text-primary); }
+.fire .text-theme-secondary { color: var(--text-secondary); }
+.fire .text-theme-accent { color: var(--accent-primary); }
+.fire .border-theme-primary { border-color: var(--border-primary); }
+.fire .border-theme-secondary { border-color: var(--border-secondary); }
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-10px); }
@@ -71,14 +178,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #1f2937;
+  background: var(--bg-secondary);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ef4444;
+  background: var(--accent-primary);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #dc2626;
+  background: var(--accent-secondary);
 }
