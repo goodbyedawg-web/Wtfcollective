@@ -1,3 +1,5 @@
 export default function Home() {
-  return <main className="min-h-screen bg-neutral-900" />;
+  return <main className="min-h-screen bg-neutral-900 text-white p-8">
+    <h1 className="text-4xl font-bold">Welcome to WTF Collective</h1>
+  </main>;
 }
