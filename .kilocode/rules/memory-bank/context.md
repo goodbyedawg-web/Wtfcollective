@@ -15,6 +15,7 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
 - [x] Memory bank documentation
 - [x] Recipe system for common features
 - [x] Removed static export config for Vercel serverless deployment
+- [x] Added basic blog functionality with markdown posts
 
 ## Current Structure
 
