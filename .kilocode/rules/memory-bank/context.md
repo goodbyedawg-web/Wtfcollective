@@ -88,4 +88,3 @@ export async function GET() {
 | Date | Changes |
 |------|---------|
 | Initial | Template created with base setup |
-| 2026-04-18 | Configured Next.js for static export to docs/ for GitHub Pages deployment |
